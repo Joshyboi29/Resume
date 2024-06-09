@@ -11245,7 +11245,7 @@ textarea.form-control-lg {
 .navbar-nav .nav-link:hover,
 .btn-primary:hover {
   transform: translateY(-3px); /* Move the element 3 pixels up on hover */
-  color: #ffc107; /* Change the color on hover */
+  color: #d122e3; /* Change the color on hover */
 }
 
 .btn-primary:hover i {
@@ -11414,7 +11414,7 @@ textarea.form-control-lg {
   transition: color 0.3s ease;
 }
 .social-icons a:hover {
-  color: #007bff;
+  color: #d122e3;
 }
 .video-box img {
   max-width: 100%;
