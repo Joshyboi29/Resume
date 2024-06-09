@@ -11230,7 +11230,7 @@ textarea.form-control-lg {
 }
 
 .custom-back-to-top i {
-  position: absolute;
+  position: ablsolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -11250,37 +11250,6 @@ textarea.form-control-lg {
 
 .btn-primary:hover i {
   transform: rotate(360deg); /* Rotate the icon 360 degrees on hover */
-}
-
-/* Custom Navbar Styles */
-.menu {
-  background-color: #343a40; /* Dark background */
-}
-
-.navbar-brand {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-}
-
-.navbar-nav .nav-link {
-  font-size: 16px;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-  color: #fff;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
-  color: #ffc107; /* Change the color on hover */
-}
-
-.btn-primary .fab {
-  margin-right: 8px;
 }
 
 /* Adjustments for smaller screens */
