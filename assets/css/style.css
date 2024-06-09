@@ -11346,3 +11346,43 @@ textarea.form-control-lg {
 .portfolio .live-preview:hover {
   background-color: #c0392b;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .portfolio .project-card {
+    flex-direction: column;
+  }
+
+  .portfolio .project-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .portfolio .project-info {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio .project-info {
+    padding: 15px;
+  }
+
+  .portfolio .project-info h3 {
+    font-size: 18px;
+  }
+
+  .portfolio .project-info p {
+    font-size: 14px;
+  }
+
+  .portfolio .technologies span {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .portfolio .live-preview {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+}
