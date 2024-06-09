@@ -11236,6 +11236,7 @@ textarea.form-control-lg {
   transform: translate(-50%, -50%);
 }
 
+/* Navbar Styles */
 .navbar-nav .nav-link,
 .btn-primary:hover {
   transition: all 0.3s ease;
@@ -11249,6 +11250,50 @@ textarea.form-control-lg {
 
 .btn-primary:hover i {
   transform: rotate(360deg); /* Rotate the icon 360 degrees on hover */
+}
+
+/* Custom Navbar Styles */
+.menu {
+  background-color: #343a40; /* Dark background */
+}
+
+.navbar-brand {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary .fab {
+  margin-right: 8px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 576px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 18px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Base styles for the portfolio section */
