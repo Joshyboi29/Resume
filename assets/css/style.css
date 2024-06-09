@@ -11257,6 +11257,19 @@ textarea.form-control-lg {
   .navbar-nav {
     text-align: center;
   }
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 18px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+    background-color: #9926f0;
+  }
 }
 
 /* Base styles for the portfolio section */
