@@ -11268,18 +11268,20 @@ textarea.form-control-lg {
 
 .portfolio .project-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .portfolio .project-card {
   display: flex;
+  flex-direction: column;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px; /* Add space between rows */
 }
 
 .portfolio .project-card:hover {
@@ -11288,7 +11290,7 @@ textarea.form-control-lg {
 }
 
 .portfolio .project-image {
-  width: 40%;
+  width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
@@ -11296,7 +11298,6 @@ textarea.form-control-lg {
 
 .portfolio .project-info {
   padding: 20px;
-  width: 60%;
 }
 
 .portfolio .project-info h3 {
