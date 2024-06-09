@@ -11270,6 +11270,13 @@ textarea.form-control-lg {
 .btn-primary {
   background-color: #007bff;
   border-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  color: #ffc107; /* Change the color on hover */
 }
 
 .btn-primary .fab {
