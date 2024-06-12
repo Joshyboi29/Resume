@@ -11297,6 +11297,24 @@ textarea.form-control-lg {
   .navbar-nav .nav-item:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
   }
+
+  /* Adjustments for tablets (portrait and landscape) */
+  @media (min-width: 577px) and (max-width: 1024px) {
+    .navbar-nav {
+      text-align: center;
+    }
+    .navbar-nav .nav-item {
+      margin: 10px 0; /* Vertical margin for stacked layout */
+    }
+    .navbar-nav .nav-link {
+      font-size: 18px;
+    }
+    .btn-primary {
+      width: 100%;
+      text-align: center;
+      background-color: #9926f0;
+    }
+  }
 }
 
 /* Base styles for the portfolio section */
