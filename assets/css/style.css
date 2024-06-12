@@ -11261,7 +11261,7 @@ textarea.form-control-lg {
   transform: rotate(360deg); /* Rotate the icon 360 degrees on hover */
 }
 
-/* Adjustments for smaller screens */
+/* Adjustments for small screen phones only */
 @media (max-width: 576px) {
   .navbar-nav {
     text-align: center;
@@ -11269,15 +11269,36 @@ textarea.form-control-lg {
   .navbar-nav .nav-item {
     margin-bottom: 10px;
   }
-
   .navbar-nav .nav-link {
     font-size: 18px;
   }
-
   .btn-primary {
     width: 100%;
     text-align: center;
     background-color: #9926f0;
+  }
+}
+
+/* Adjustments for tablets (portrait and landscape) */
+@media (min-width: 577px) and (max-width: 1024px) {
+  /* Add any specific tablet styles here */
+  .navbar-nav .nav-link {
+    font-size: 16px;
+  }
+  .btn-primary {
+    width: auto;
+    background-color: #007bff;
+  }
+}
+
+/* Default desktop styles */
+@media (min-width: 1025px) {
+  .navbar-nav .nav-link {
+    font-size: 14px;
+  }
+  .btn-primary {
+    width: auto;
+    background-color: #007bff;
   }
 }
 
