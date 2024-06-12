@@ -11261,26 +11261,50 @@ textarea.form-control-lg {
   transform: rotate(360deg); /* Rotate the icon 360 degrees on hover */
 }
 
+/* Add box shadow effect to nav items on hover */
+.navbar-nav .nav-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  border-radius: 5px; /* Slightly round corners */
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle background color change */
+}
+
+/* General navbar styles */
+.navbar-nav .nav-link,
+.btn-primary:hover {
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.btn-primary:hover {
+  transform: translateY(-3px); /* Move the element 3 pixels up on hover */
+  color: #d122e3; /* Change the color on hover */
+}
+
+.btn-primary:hover i {
+  transform: rotate(360deg); /* Rotate the icon 360 degrees on hover */
+}
+
 /* Box shadow effect for nav items */
 .navbar-nav .nav-item {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   border-radius: 5px; /* Slightly round corners */
   background-color: rgba(255, 255, 255, 0.1); /* Subtle background color */
-  margin: 0 5px; /* Add some margin to separate items */
+  margin: 0 10px; /* Add margin to separate items */
+  padding: 5px 10px; /* Add padding for better spacing */
 }
 
 /* Enhance box shadow on hover */
 .navbar-nav .nav-item:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
-    
+
 /* Adjustments for small screen phones only */
 @media (max-width: 576px) {
   .navbar-nav {
     text-align: center;
   }
   .navbar-nav .nav-item {
-    margin-bottom: 10px;
+    margin: 10px 0; /* Vertical margin for stacked layout */
   }
   .navbar-nav .nav-link {
     font-size: 18px;
@@ -11298,7 +11322,7 @@ textarea.form-control-lg {
     text-align: center;
   }
   .navbar-nav .nav-item {
-    margin-bottom: 10px;
+    margin: 10px 0; /* Vertical margin for stacked layout */
   }
   .navbar-nav .nav-link {
     font-size: 18px;
