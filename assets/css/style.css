@@ -11261,11 +11261,17 @@ textarea.form-control-lg {
   transform: rotate(360deg); /* Rotate the icon 360 degrees on hover */
 }
 
-/* Add box shadow effect to nav items on hover */
-.navbar-nav .nav-item:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+/* Box shadow effect for nav items */
+.navbar-nav .nav-item {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   border-radius: 5px; /* Slightly round corners */
-  background-color: rgba(255, 255, 255, 0.1); /* Subtle background color change */
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle background color */
+  margin: 0 5px; /* Add some margin to separate items */
+}
+
+/* Enhance box shadow on hover */
+.navbar-nav .nav-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
     
 /* Adjustments for small screen phones only */
