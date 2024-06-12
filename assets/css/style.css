@@ -11268,22 +11268,6 @@ textarea.form-control-lg {
   background-color: rgba(255, 255, 255, 0.1); /* Subtle background color change */
 }
 
-/* General navbar styles */
-.navbar-nav .nav-link,
-.btn-primary:hover {
-  transition: all 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover,
-.btn-primary:hover {
-  transform: translateY(-3px); /* Move the element 3 pixels up on hover */
-  color: #d122e3; /* Change the color on hover */
-}
-
-.btn-primary:hover i {
-  transform: rotate(360deg); /* Rotate the icon 360 degrees on hover */
-}
-
 /* Box shadow effect for nav items */
 .navbar-nav .nav-item {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -11314,6 +11298,10 @@ textarea.form-control-lg {
     text-align: center;
     background-color: #9926f0;
   }
+  .btn-primary:hover {
+  transform: translateY(-3px); /* Move the element 3 pixels up on hover */
+  color: #d122e3; /* Change the color on hover */
+  }
 }
 
 /* Adjustments for tablets (portrait and landscape) */
@@ -11331,6 +11319,10 @@ textarea.form-control-lg {
     width: 100%;
     text-align: center;
     background-color: #9926f0;
+  }
+  .btn-primary:hover {
+  transform: translateY(-3px); /* Move the element 3 pixels up on hover */
+  color: #d122e3; /* Change the color on hover */
   }
 }
 
