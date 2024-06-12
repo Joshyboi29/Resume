@@ -11261,27 +11261,6 @@ textarea.form-control-lg {
   transform: rotate(360deg); /* Rotate the icon 360 degrees on hover */
 }
 
-/* Add box shadow effect to nav items on hover */
-.navbar-nav .nav-item:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-  border-radius: 5px; /* Slightly round corners */
-  background-color: rgba(255, 255, 255, 0.1); /* Subtle background color change */
-}
-
-/* Box shadow effect for nav items */
-.navbar-nav .nav-item {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  border-radius: 5px; /* Slightly round corners */
-  background-color: rgba(255, 255, 255, 0.1); /* Subtle background color */
-  margin: 0 10px; /* Add margin to separate items */
-  padding: 5px 10px; /* Add padding for better spacing */
-}
-
-/* Enhance box shadow on hover */
-.navbar-nav .nav-item:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
-}
-
 /* Adjustments for small screen phones only */
 @media (max-width: 576px) {
   .navbar-nav {
@@ -11298,9 +11277,25 @@ textarea.form-control-lg {
     text-align: center;
     background-color: #9926f0;
   }
-  .btn-primary:hover {
-  transform: translateY(-3px); /* Move the element 3 pixels up on hover */
-  color: #d122e3; /* Change the color on hover */
+  /* Add box shadow effect to nav items on hover */
+  .navbar-nav .nav-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    border-radius: 5px; /* Slightly round corners */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background color change */
+  }
+  
+  /* Box shadow effect for nav items */
+  .navbar-nav .nav-item {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 5px; /* Slightly round corners */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background color */
+    margin: 0 10px; /* Add margin to separate items */
+    padding: 5px 10px; /* Add padding for better spacing */
+  }
+
+  /* Enhance box shadow on hover */
+  .navbar-nav .nav-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
   }
 }
 
@@ -11323,6 +11318,26 @@ textarea.form-control-lg {
   .btn-primary:hover {
   transform: translateY(-3px); /* Move the element 3 pixels up on hover */
   color: #d122e3; /* Change the color on hover */
+  }
+  /* Add box shadow effect to nav items on hover */
+  .navbar-nav .nav-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    border-radius: 5px; /* Slightly round corners */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background color change */
+  }
+  
+  /* Box shadow effect for nav items */
+  .navbar-nav .nav-item {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 5px; /* Slightly round corners */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background color */
+    margin: 0 10px; /* Add margin to separate items */
+    padding: 5px 10px; /* Add padding for better spacing */
+  }
+
+  /* Enhance box shadow on hover */
+  .navbar-nav .nav-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
   }
 }
 
