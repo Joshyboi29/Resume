@@ -245,10 +245,9 @@
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script>
-    // JavaScript to toggle the back to top button visibility
   window.addEventListener('scroll', function() {
     const button = document.getElementById('backToTop');
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
       button.style.display = 'block';
     } else {
       button.style.display = 'none';
@@ -258,8 +257,8 @@
   document.getElementById('backToTop').addEventListener('click', function(event) {
     event.preventDefault();
     window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
+      top: 0,
+      behavior: 'smooth'
     });
   });
   </script>
