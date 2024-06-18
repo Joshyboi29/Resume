@@ -14,7 +14,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   </head>
-<body>
+<body class="no-scroll">
   <div class="loading-overlay">
     <img src="images/logo1nobg.png" alt="Logo" class="loading-logo">
   </div>
@@ -262,14 +262,19 @@
     });
   });
   </script>
-  <script>
+<script>
     // Function to remove loading overlay and re-enable scrolling
     function removeLoadingOverlay() {
         var loadingOverlay = document.querySelector('.loading-overlay');
         if (loadingOverlay) {
             loadingOverlay.remove();
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
+            document.body.classList.remove('no-scroll'); // Re-enable scrolling
+            document.removeEventListener('touchmove', preventDefault, { passive: false });
         }
+    }
+
+    function preventDefault(e) {
+        e.preventDefault();
     }
 
     // GSAP Animation
@@ -294,8 +299,12 @@
                 });
             }
         });
+
+        // Prevent scrolling on touch devices
+        document.addEventListener('touchmove', preventDefault, { passive: false });
+        document.body.classList.add('no-scroll'); // Prevent scrolling
     });
-  </script>
+</script>
   <script>
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
