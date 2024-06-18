@@ -14,7 +14,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   </head>
-<body class="no-scroll">
+<body>
   <div class="loading-overlay">
     <img src="images/logo1nobg.png" alt="Logo" class="loading-logo">
   </div>
@@ -262,65 +262,39 @@
     });
   });
   </script>
-<script>
-    // Function to remove loading overlay and re-enable scrolling
-    function removeLoadingOverlay() {
-        var loadingOverlay = document.querySelector('.loading-overlay');
-        if (loadingOverlay) {
-            loadingOverlay.remove();
-        }
-        enableScrolling();
-    }
+  <script>
+      // Function to remove loading overlay
+      function removeLoadingOverlay() {
+          var loadingOverlay = document.querySelector('.loading-overlay');
+          if (loadingOverlay) {
+              loadingOverlay.remove();
+          }
+      }
 
-    // Prevent default touchmove behavior
-    function preventDefault(e) {
-        e.preventDefault();
-    }
+      // GSAP Animation
+      document.addEventListener('DOMContentLoaded', function() {
+          var logo = document.querySelector('.loading-logo');
 
-    // Disable scrolling
-    function disableScrolling() {
-        document.body.classList.add('no-scroll');
-        document.addEventListener('touchmove', preventDefault, { passive: false });
-    }
-
-    // Enable scrolling
-    function enableScrolling() {
-        document.body.classList.remove('no-scroll');
-        document.removeEventListener('touchmove', preventDefault, { passive: false });
-    }
-
-    // GSAP Animation
-    document.addEventListener('DOMContentLoaded', function() {
-        var logo = document.querySelector('.loading-logo');
-
-        gsap.to(logo, {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 1.5,
-            ease: "elastic.out(1, 0.75)",
-            rotation: 360,
-            onComplete: function() {
-                gsap.to(logo, {
-                    opacity: 0,
-                    scale: 0.2,
-                    duration: 3,
-                    ease: "power2.inOut",
-                    rotation: -360,
-                    onComplete: removeLoadingOverlay // Call function to remove loading overlay
-                });
-            }
-        });
-
-        // Prevent scrolling initially
-        disableScrolling();
-
-        // Allow scrolling again after 3 seconds
-        setTimeout(function() {
-            enableScrolling();
-        }, 3000); // 3000 milliseconds = 3 seconds
-    });
-</script>
+          gsap.to(logo, {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              duration: 1.5,
+              ease: "elastic.out(1, 0.75)",
+              rotation: 360,
+              onComplete: function() {
+                  gsap.to(logo, {
+                      opacity: 0,
+                      scale: 0.2,
+                      duration: 3,
+                      ease: "power2.inOut",
+                      rotation: -360,
+                      onComplete: removeLoadingOverlay // Call function to remove loading overlay
+                  });
+              }
+          });
+      });
+  </script>
   <script>
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
