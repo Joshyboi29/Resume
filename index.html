@@ -268,13 +268,25 @@
         var loadingOverlay = document.querySelector('.loading-overlay');
         if (loadingOverlay) {
             loadingOverlay.remove();
-            document.body.classList.remove('no-scroll'); // Re-enable scrolling
-            document.removeEventListener('touchmove', preventDefault, { passive: false });
         }
+        enableScrolling();
     }
 
+    // Prevent default touchmove behavior
     function preventDefault(e) {
         e.preventDefault();
+    }
+
+    // Disable scrolling
+    function disableScrolling() {
+        document.body.classList.add('no-scroll');
+        document.addEventListener('touchmove', preventDefault, { passive: false });
+    }
+
+    // Enable scrolling
+    function enableScrolling() {
+        document.body.classList.remove('no-scroll');
+        document.removeEventListener('touchmove', preventDefault, { passive: false });
     }
 
     // GSAP Animation
@@ -300,14 +312,12 @@
             }
         });
 
-        // Prevent scrolling on touch devices
-        document.addEventListener('touchmove', preventDefault, { passive: false });
-        document.body.classList.add('no-scroll'); // Prevent scrolling
-        
+        // Prevent scrolling initially
+        disableScrolling();
+
         // Allow scrolling again after 3 seconds
         setTimeout(function() {
-            document.body.classList.remove('no-scroll'); // Re-enable scrolling
-            document.removeEventListener('touchmove', preventDefault, { passive: false });
+            enableScrolling();
         }, 3000); // 3000 milliseconds = 3 seconds
     });
 </script>
