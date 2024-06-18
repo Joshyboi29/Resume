@@ -16,9 +16,9 @@
   </head>
 <body>
   <div class="loading-overlay">
-      <img src="images/logo1nobg.png" alt="Logo" class="loading-logo">
+    <img src="images/logo1nobg.png" alt="Logo" class="loading-logo">
   </div>
-
+  
   <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top" style="background-color: #343a40;">
     <div class="container">
       <a class="navbar-brand" href="#" style="font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 24px; text-decoration: none;">
@@ -263,37 +263,38 @@
   });
   </script>
   <script>
-      // Function to remove loading overlay
-      function removeLoadingOverlay() {
-          var loadingOverlay = document.querySelector('.loading-overlay');
-          if (loadingOverlay) {
-              loadingOverlay.remove();
-          }
-      }
+    // Function to remove loading overlay and re-enable scrolling
+    function removeLoadingOverlay() {
+        var loadingOverlay = document.querySelector('.loading-overlay');
+        if (loadingOverlay) {
+            loadingOverlay.remove();
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+    }
 
-      // GSAP Animation
-      document.addEventListener('DOMContentLoaded', function() {
-          var logo = document.querySelector('.loading-logo');
+    // GSAP Animation
+    document.addEventListener('DOMContentLoaded', function() {
+        var logo = document.querySelector('.loading-logo');
 
-          gsap.to(logo, {
-              opacity: 1,
-              y: 0,
-              scale: 1,
-              duration: 1.5,
-              ease: "elastic.out(1, 0.75)",
-              rotation: 360,
-              onComplete: function() {
-                  gsap.to(logo, {
-                      opacity: 0,
-                      scale: 0.2,
-                      duration: 3,
-                      ease: "power2.inOut",
-                      rotation: -360,
-                      onComplete: removeLoadingOverlay // Call function to remove loading overlay
-                  });
-              }
-          });
-      });
+        gsap.to(logo, {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 1.5,
+            ease: "elastic.out(1, 0.75)",
+            rotation: 360,
+            onComplete: function() {
+                gsap.to(logo, {
+                    opacity: 0,
+                    scale: 0.2,
+                    duration: 3,
+                    ease: "power2.inOut",
+                    rotation: -360,
+                    onComplete: removeLoadingOverlay // Call function to remove loading overlay
+                });
+            }
+        });
+    });
   </script>
   <script>
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
