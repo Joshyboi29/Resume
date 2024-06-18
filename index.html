@@ -303,6 +303,12 @@
         // Prevent scrolling on touch devices
         document.addEventListener('touchmove', preventDefault, { passive: false });
         document.body.classList.add('no-scroll'); // Prevent scrolling
+        
+        // Allow scrolling again after 3 seconds
+        setTimeout(function() {
+            document.body.classList.remove('no-scroll'); // Re-enable scrolling
+            document.removeEventListener('touchmove', preventDefault, { passive: false });
+        }, 3000); // 3000 milliseconds = 3 seconds
     });
 </script>
   <script>
