@@ -11472,7 +11472,7 @@ textarea.form-control-lg {
 
 /* Apply animation to .display-2--intro with delay */
 .display-2--intros {
-  animation: slideInFromLeft 1.5s ease-out 1.5s; /* 3s delay added here */
+  animation: slideInFromLeft 0.5s ease-out 5s; /* 3s delay added here */
 }
 
 /* Initial hide for content */
