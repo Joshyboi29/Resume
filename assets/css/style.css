@@ -11470,28 +11470,9 @@ textarea.form-control-lg {
   z-index: 5000; /* Ensure it's on top of everything */
 }
 
-.loading-logo {
-  width: 150px; /* Adjust width as needed */
-  height: auto;
-  opacity: 0;
-  transform: translateY(-50px) scale(0.2); /* Initial position and scale */
-}
-
-/* Animation keyframes */
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 /* Apply animation to .display-2--intro with delay */
 .display-2--intros {
-  animation: slideInFromLeft 1.5s ease-out 5s; /* 3s delay added here */
+  animation: slideInFromLeft 1.5s ease-out 1.5s; /* 3s delay added here */
 }
 
 /* Initial hide for content */
