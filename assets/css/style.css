@@ -11457,9 +11457,9 @@ textarea.form-control-lg {
   transform: scale(1.05);
 }
 
-/* Apply animation to .display-2--intro with delay */
-.display-2--intros {
-  animation: slideInFromLeft 1.5s; /* 3s delay added here */
+/* Apply animation to .display-2--intro */
+.display-2--intro {
+  animation: slideInFromLeft 1.5s forwards; /* No delay */
 }
 
 /* Initial hide for content */
@@ -11467,17 +11467,13 @@ textarea.form-control-lg {
   opacity: 0;
 }
 
-/* Animation to fade in content */
-@keyframes fadeIn {
-  0% {
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
     opacity: 0;
   }
-  100% {
+  to {
+    transform: translateX(0);
     opacity: 1;
   }
-}
-
-/* Apply animation to #content */
-#content.loaded {
-  animation: fadeIn 1s ease forwards;
 }
