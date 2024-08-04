@@ -260,39 +260,6 @@
   });
   </script>
   <script>
-      // Function to remove loading overlay
-      function removeLoadingOverlay() {
-          var loadingOverlay = document.querySelector('.loading-overlay');
-          if (loadingOverlay) {
-              loadingOverlay.remove();
-          }
-      }
-
-      // GSAP Animation
-      document.addEventListener('DOMContentLoaded', function() {
-          var logo = document.querySelector('.loading-logo');
-
-          gsap.to(logo, {
-              opacity: 1,
-              y: 0,
-              scale: 1,
-              duration: 1.5,
-              ease: "elastic.out(1, 0.75)",
-              rotation: 360,
-              onComplete: function() {
-                  gsap.to(logo, {
-                      opacity: 0,
-                      scale: 0.2,
-                      duration: 3,
-                      ease: "power2.inOut",
-                      rotation: -360,
-                      onComplete: removeLoadingOverlay // Call function to remove loading overlay
-                  });
-              }
-          });
-      });
-  </script>
-  <script>
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       return new bootstrap.Tooltip(tooltipTriggerEl)
