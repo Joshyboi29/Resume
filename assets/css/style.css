@@ -11458,8 +11458,8 @@ textarea.form-control-lg {
 }
 
 /* Apply animation to .display-2--intro */
-.display-2--intro {
-  animation: slideInFromLeft 1.5s forwards; /* No delay */
+.display-2--intros {
+  animation: slideInFromLeft 1.5s; /* No delay */
 }
 
 /* Initial hide for content */
