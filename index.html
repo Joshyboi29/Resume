@@ -272,10 +272,10 @@
     document.addEventListener('DOMContentLoaded', function() {
       const loadingOverlay = document.getElementById('loadingOverlay');
   
-      // Optional delay for overlay hiding
-      setTimeout(() => {
-        loadingOverlay.style.display = 'none'; // Hide the spinner after a delay
-      }, 1500); // Adjust the time to ensure it stays for at least 1.5 seconds
+      // Hide the spinner once the DOM is fully loaded
+      window.addEventListener('load', function() {
+        loadingOverlay.style.display = 'none'; // Hide the spinner after everything is loaded
+      });
     });
   </script>
   <script>
